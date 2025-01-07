@@ -1,0 +1,21 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors:
+
+```css
+div {
+  color: blue;
+}
+
+.class1 div {
+  color: red;
+}
+
+#id1 .class1 div {
+  color: green;
+}
+
+#id1 div {
+  color: purple;
+}
+```
+
+In this example, the specificity of the selectors determines which style will be applied to an element with the id "id1", class "class1", and a child div. The ID selector (#id1) has the highest specificity, followed by the class and element selectors. Therefore, the "color: purple" declaration will override the other color declarations.
